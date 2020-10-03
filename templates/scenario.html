@@ -16,6 +16,7 @@
 <div id="answer" class="hidden">
     <div class='user-response'>
     </div>
+<<<<<<< HEAD
     <div class="card m-4">
         <div class="card-body">
             <div class="card-title"> Suggestions </div>
@@ -27,6 +28,16 @@
                 </ul>
             </div>
         </div>
+=======
+
+    <div class="suggestions">
+        <ul>
+            {% for suggestion in scenario.suggestions %}
+            <li>{{ suggestion }}</li>
+            {% endfor %}
+        </ul>
+
+>>>>>>> 6fe6976... Added route to hardcode scenario 1
     </div>
     <div class="card m-4">
         <div class="card-body">
