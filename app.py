@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/')
 def landing_page():
     """Beginning page, """
-    return 'Another test'
+    return render_template('home.html')
 
 
 ########################################
@@ -33,6 +33,8 @@ def first_scenario():
 @app.route('/education')
 def education_resources():
     """Shows educational resources"""
+
+    return render_template('education.html')
 
 @app.route('/education/scenario/<int:id>')
 def resources_scenario_one(id):
