@@ -23,10 +23,13 @@ def scenarios():
     """Shows all scenarios"""
     return render_template('scenario_list.html', scenarios = MAIN_LIST)
 
-@app.route('/scenario/1')
-def first_scenario():
+@app.route('/scenario/<int:number>')
+def first_scenario(number):
     """Shows the first scenario"""
-    return render_template('scenario1.html', scenario1=scenario1)
+    for item in MAIN_LIST:
+        if item[id] == number:
+            return render_template('scenario.html', scenario=item)
+    
 
 
 ########################################
