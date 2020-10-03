@@ -36,16 +36,16 @@ def results():
        evalutate it)
     """
 
-@app.route('/resources')
+# @app.route('/resources')
 
-@app.route('/applications', methods=['GET','POST'])
+# @app.route('/applications', methods=['GET','POST'])
 
-@app.route('/account')
+# @app.route('/account')
 
-@app.route('/account/edit')
+# @app.route('/account/edit')
 
-@app.route('/admin')
+# @app.route('/admin')
 
-@app.route('/admin/edit')
+# @app.route('/admin/edit')
 
-@app.route('/signout')
+# @app.route('/signout')
