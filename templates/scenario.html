@@ -3,9 +3,9 @@
 {% block content %}
 <div class="card">
     <div class="card-body">
-        <div class="card-title">Scenario 1</div>
+        <div class="card-title">{{scenario.title}}</div>
         <div class="card-text">
-            {{scenario1.description}}
+            {{scenario.description}}
         </div></br>
         <form id="form-user-response">
             <input type="text-area" id="form-input">
@@ -19,12 +19,12 @@
     </div>
     <div class="suggestions">
         <ul>
-            {{scenario1.suggestions}}
+            {{scenario.suggestions}}
         </ul>
     </div>
     <div class="insights">
         <ul>
-            {{scenario1.insights}}
+            {{scenario.insights}}
         </ul>
     </div>
 </div>
