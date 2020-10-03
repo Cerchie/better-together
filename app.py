@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template, request, flash, redirect, session, g, jsonify
-
+from scenarios import scenario1
 app = Flask(__name__)
 
 # app.configs below here
@@ -25,6 +25,7 @@ def scenarios():
 @app.route('/scenario/1')
 def first_scenario():
     """Shows the first scenario"""
+    return render_template('scenario1.html', scenario1=scenario1)
 
 
 ########################################
