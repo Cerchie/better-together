@@ -1,3 +1,3 @@
 # better_together_tardigrades
 
-|Lucia
+|Lucia, Jake, Amanda, Luis
