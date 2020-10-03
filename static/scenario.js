@@ -5,16 +5,16 @@ const form = document.querySelector('#form-user-response');
 const input = document.querySelector('#form-input');
 
 btn.addEventListener('click', function (e) {
-    console.log('click')
     e.preventDefault();
     answer.removeClass('.hidden');
+    responseDiv.innerText = input.value;
 });
 
-input = document.getElementById("userInput").value;
+// input = document.getElementById("userInput").value;
 
 form.addEventListener('submit', function (e) {
     console.log('click')
     e.preventDefault();
-    responseDiv.innerText = input.value;
+
 
 });
