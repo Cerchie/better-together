@@ -6,11 +6,10 @@ const input = document.querySelector('#form-input');
 
 btn.addEventListener('click', function (e) {
     e.preventDefault();
-    answer.removeClass('.hidden');
+    answer.classList.remove('.hidden');
     responseDiv.innerText = input.value;
 });
 
-// input = document.getElementById("userInput").value;
 
 form.addEventListener('submit', function (e) {
     console.log('click')
