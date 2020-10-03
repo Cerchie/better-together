@@ -20,13 +20,17 @@
 
     <div class="suggestions">
         <ul>
-            {{scenario.suggestions}}
+            {% for suggestion in scenario.suggestions %}
+            <li>{{suggestion}}</li>
+            {% endfor %}
         </ul>
 
     </div>
     <div class="insights">
         <ul>
-            {{scenario.insights}}
+            {% for insight in scenario.insights %}
+            <li>{{insight}}</li>
+            {% endfor %}
         </ul>
     </div>
 </div>
