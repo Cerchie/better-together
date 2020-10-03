@@ -15,23 +15,32 @@
 <button id="response" class="btn btn-info">Submit response</button>
 <div id="answer" class="hidden">
     <div class='user-response'>
-
     </div>
-
-    <div class="suggestions">
-        <ul>
-            {% for suggestion in scenario.suggestions %}
-            <li>{{suggestion}}</li>
-            {% endfor %}
-        </ul>
-
+    <div class="card m-4">
+        <div class="card-body">
+            <div class="card-title"> Suggestions </div>
+            <div class="suggestions">
+                <ul>
+                    {% for suggestion in scenario.suggestions %}
+                    <li>{{suggestion}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="insights">
-        <ul>
-            {% for insight in scenario.insights %}
-            <li>{{insight}}</li>
-            {% endfor %}
-        </ul>
+    <div class="card m-4">
+        <div class="card-body">
+            <div class="card-title"> Suggestions </div>
+            <div class="insights">
+                <div class="insights">
+                    <ul>
+                        {% for insight in scenario.insights %}
+                        <li>{{insight}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
