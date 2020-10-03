@@ -1,3 +1,7 @@
 /venv
-requirement.txt
-.gitignore
+/__pycache__
+__pycache__/
+/.vscode
+.vscode/
+__pycache__
+.vscode
