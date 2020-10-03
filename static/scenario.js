@@ -9,7 +9,8 @@ btn.addEventListener('click', function (e) {
     e.preventDefault();
     answer.classList.toggle('hidden');
     responseDiv.innerText = input.value;
-    input.value = "";
+    input.value = '';
+
 });
 
 form.addEventListener('submit', function (e) {
