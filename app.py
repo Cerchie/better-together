@@ -57,3 +57,10 @@ def testing():
         flash(f'Something went wrong!','danger')
 
     return render_template('create_scenario.html', form = form)
+
+
+@app.errorhandler(404)
+def page_not_found(err):
+    """Page non existent"""
+
+    return render_template('404.html'), 404
