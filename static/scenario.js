@@ -5,15 +5,15 @@ const form = document.querySelector('#form-user-response');
 const input = document.querySelector('#form-input');
 
 btn.addEventListener('click', function (e) {
-    console.log('click')
+    console.log('click');
     e.preventDefault();
-    answer.classList.remove('.hidden');
+    answer.classList.toggle('hidden');
+    console.log(answer);
     responseDiv.innerText = input.value;
 });
 
-
 form.addEventListener('submit', function (e) {
-    console.log('click')
+    console.log('click2');
     e.preventDefault();
 
 

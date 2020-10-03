@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <h3 class="navbar-brand">Welcome</h3>
+        <a class="navbar-brand mr-4" href="{{ url_for('landing_page') }}">Home</a>
+    </nav>
     {% block content %}
 
     {% endblock %}
