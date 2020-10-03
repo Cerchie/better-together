@@ -5,3 +5,19 @@ scenario1 = {
     "suggestions": ["Have you considered ____","I don’t see it the way you do. I see it as __________.", "Tell me more about ___", "We don't agree on ___ but we can agree on _____"],
     "insights": ["How am I processing the experience?", "What body sensations do I have?", "What is my emotional reaction?"]
 }
+
+MAIN_LIST = [scenario1]
+
+def create_scenario(title, desc, sugg, insights):
+    """Creates a new scenario object and adds it to master List"""
+    new_scenario = {
+        "id": len(MAIN_LIST)+1,
+        "title": title,
+        "description": desc,
+        "suggestions": sugg.split(','),
+        "insights": insights.split(',')
+    }
+
+    MAIN_LIST.append(new_scenario)
+
+    return MAIN_LIST

@@ -1,11 +1,12 @@
 import os
 
 from flask import Flask, render_template, request, flash, redirect, session, g, jsonify
-from scenarios import scenario1
+from forms import EnterScenario
+from scenarios import scenario1, MAIN_LIST, create_scenario
 app = Flask(__name__)
 
 # app.configs below here
-
+app.config['SECRET_KEY'] = 'tardigrades'
 ########
 
 ########################################
@@ -20,7 +21,7 @@ def landing_page():
 @app.route('/scenario')
 def scenarios():
     """Shows all scenarios"""
-    return 'Scenarios'
+    return render_template('scenario_list.html', scenarios = MAIN_LIST)
 
 @app.route('/scenario/1')
 def first_scenario():
@@ -41,4 +42,15 @@ def resources_scenario_one(id):
     """Shows education specific for this particular scenario"""
     
 
+@app.route('/scenario_maker', methods=['GET','POST'])
+def testing():
+    """Let user create their own scenarios"""
+    form = EnterScenario()
 
+    if form.validate_on_submit():
+        create_scenario(form.title.data, form.description.data, form.suggestions.data, form.insights.data)
+        return redirect('/scenario')
+    else:
+        flash(f'Something went wrong!','danger')
+
+    return render_template('create_scenario.html', form = form)
