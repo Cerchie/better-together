@@ -1,5 +1,11 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<!--Loop through scneario here-->
+<div>
+    <ul>
+        {% for scenario in scenarios %}
+        <li>{{scenario.title}}</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
