@@ -7,7 +7,7 @@ const input = document.querySelector('#form-input');
 btn.addEventListener('click', function (e) {
     console.log('click');
     e.preventDefault();
-    answer.classList.toggle('hidden');
+    answer.classList.toggle('d-none');
     responseDiv.innerText = input.value;
     input.value = '';
 
