@@ -36,8 +36,6 @@ def first_scenario(number):
     for item in MAIN_LIST:
         if item['id'] == number:
             return render_template('scenario.html', scenario=item)
-    
-
 
 ########################################
 #Education Scenario
