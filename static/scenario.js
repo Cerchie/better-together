@@ -8,13 +8,12 @@ btn.addEventListener('click', function (e) {
     console.log('click');
     e.preventDefault();
     answer.classList.toggle('hidden');
-    console.log(answer);
     responseDiv.innerText = input.value;
+    input.value = "";
 });
 
 form.addEventListener('submit', function (e) {
     console.log('click2');
     e.preventDefault();
-
 
 });
