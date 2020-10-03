@@ -18,26 +18,23 @@
     </div>
 <<<<<<< HEAD
 
-    {% if scenario.id == 1 %}
-    <div class="card m-4">
-        <div class="card-body">
-            <div class="card-title"> Suggestions </div>
-
-            <p>Compare your response with the following:</p>
-
-            <p>Before you speak, take inventory of your emotions.
-                What bodily sensations are you experiencing? How do your head, stomach, and heart feel? </p>
-
-            <p> You might say 'I don't see it that way. I know the job market is tough right now,
-                but have you considered that it might be an effect of the pandemic?' </p>
-
-        </div>
     </div>
     {% else %}
 
 =======
+>>>>>>> accepted merge
+    <div class="card m-4">
+        <div class="card-body">
+            <div class="card-title"> Suggestions </div>
+            <div class="suggestions">
+                <ul>
+                    {% for suggestion in scenario.suggestions %}
+                    <li>{{suggestion}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
 <<<<<<< HEAD
->>>>>>> 5c67b7e9dedce9a10fcac8a74ee4dcbefa180603
     <div class="card m-4">
         <div class="card-body">
             <div class="card-title"> Suggestions </div>
@@ -50,15 +47,7 @@
             </div>
         </div>
 =======
-
-    <div class="suggestions">
-        <ul>
-            {% for suggestion in scenario.suggestions %}
-            <li>{{ suggestion }}</li>
-            {% endfor %}
-        </ul>
-
->>>>>>> 6fe6976... Added route to hardcode scenario 1
+>>>>>>> accepted merge
     </div>
     <div class="card m-4">
         <div class="card-body">
