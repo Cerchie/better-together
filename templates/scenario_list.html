@@ -4,7 +4,11 @@
 <div>
     <ul>
         {% for scenario in scenarios %}
-        <li>{{scenario.title}}</li>
+        <li>
+            <a href="{{url_for('scenario', scenario=item)}}">{{scenario.title}}</a>
+        </li>
+    
+        <li></li>
         {% endfor %}
     </ul>
 </div>
