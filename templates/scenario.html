@@ -58,31 +58,6 @@
                 <p>Compare your response with the following:</p>
 
                 <p>Before you speak, take inventory of your emotions. What bodily sensations are you
-                    experiencing?
-                    How
-                    do
-                    your
-                    head, stomach, and heart feel?</p>
-
-                <p>You might say 'Tell me more about why you think that.' Wait for him to finish his response to your
-                    question.
-                    You might respond 'Thanks for explaining. I don't see it the way you do.' If you feel upset, you can
-                    say 'I'd love to
-                    talk about this another time, but can we table the discussion until after the holidays?' </p>
-                </div>
-        </div>
-    </div>
-
-        {% elif scenario.id == 2 %}
-
-    <div id='conversationStarters' class="card d-none">
-        <div class="card-body">
-            <div class="card-title">Suggestions</div>
-                <div class="card-text">
-
-                <p>Compare your response with the following:</p>
-
-                <p>Before you speak, take inventory of your emotions. What bodily sensations are you
                    experiencing? How does your head, stomach, and heart feel?</p>
                 <p>You might say, “I see that your intention was positive, but that comment makes me feel upset. 
                    Our babies will be cute, but I don’t like the implication that it’s because of their ethnic makeup.” 
@@ -110,12 +85,9 @@
         </div>
     </div>
 
-{% else %}
+    {% else %}
 
-<div id="answer" class="d-none">
-    <div class='user-response'></div>
-
-    <div class="card m-4 hidden">
+    <div id='conversationStarters' class="card m-4 d-none">
         <div class="card-body">
             <div class="card-title">Suggestions</div>
                 <div class="suggestions">
@@ -126,9 +98,7 @@
                   </ul>
                 </div>
         </div>
-    </div>
-
-    <div class="card m-4">
+        <br/>
         <div class="card-body">
             <div class="card-title">Insights</div>
                 <div class="insights">
@@ -140,6 +110,5 @@
                 </div>
         </div>
     </div>
-</div>
 {% endif %}
 {% endblock %}
