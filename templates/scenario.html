@@ -9,26 +9,27 @@
             {{scenario.description}}
         </div></br>
         <form id="form-user-response">
+            <field name='response'>Enter your response to this situation..</field>
             <input type="text-area" id="form-input">
+            <button id="response" class="btn btn-info">Submit response</button>
         </form>
     </div>
 </div>
-<button id="response" class="btn btn-info">Submit response</button>
 
-{% if scenario.id == 1 %}
-<div id="answer" class="hidden">
+<div id="answer" class="d-none">
     <h3> Your Response: </h3>
-    <div class="card-body">
-        <div class='user-response'>
-        </div>
+</div>
 
+    <div class="card-body">
+        <div class='user-response'></div>
+    </div>
 
         {% if scenario.id == 1 %}
 
-        <div class="card">
+        <div id='conversationStarters' class="card d-none">
             <div class="card-body">
-                <div class="card-title"> Suggestions</div>
-                <div class="card-text">
+                <div class="card-title">Suggestions</div>
+                    <div class="card-text">
 
                     <p>Compare your response with the following:</p>
 
@@ -43,19 +44,16 @@
                         you
                         considered
                         that it might be an effect of the pandemic?'</p>
-                </div>
+                    </div>
             </div>
         </div>
-    </div>
 
+        {% elif scenario.id == 2 %}
 
-    {% elif scenario.id == 2 %}
-
->>>>>>> adding scen responses, editing title
-    <div class="card">
+    <div id='conversationStarters' class="card d-none">
         <div class="card-body">
-            <div class="card-title"> Suggestions</div>
-            <div class="card-text">
+            <div class="card-title">Suggestions</div>
+                <div class="card-text">
 
                 <p>Compare your response with the following:</p>
 
@@ -71,81 +69,68 @@
                     You might respond 'Thanks for explaining. I don't see it the way you do.' If you feel upset, you can
                     say 'I'd love to
                     talk about this another time, but can we table the discussion until after the holidays?' </p>
-            </div>
+                </div>
         </div>
     </div>
-</div>
 
-{% elif scenario.id == 2 %}
-<div class="card">
-    <div class="card-body">
-        <div class="card-title"> Suggestions</div>
-        <div class="card-text">
+        {% elif scenario.id == 2 %}
 
-            <p>Compare your response with the following:</p>
+    <div id='conversationStarters' class="card d-none">
+        <div class="card-body">
+            <div class="card-title">Suggestions</div>
+                <div class="card-text">
 
-            <p>Before you speak, take inventory of your emotions. What bodily sensations are you
-                experiencing?
-                How
-                do
-                your
-                head, stomach, and heart feel?</p>
-            <p>You might say, “I see that your intention was positive, but that comment makes me feel upset. 
-                Our babies will be cute, but I don’t like the implication that it’s because of their ethnic makeup.” 
-                (We got this response from <a href="https://www.theroot.com/mixed-kids-are-the-cutest-isn-t-cute-1790895928">this article</a> if you want to read more.)</p>
+                <p>Compare your response with the following:</p>
+
+                <p>Before you speak, take inventory of your emotions. What bodily sensations are you
+                   experiencing? How does your head, stomach, and heart feel?</p>
+                <p>You might say, “I see that your intention was positive, but that comment makes me feel upset. 
+                   Our babies will be cute, but I don’t like the implication that it’s because of their ethnic makeup.” 
+                   (We got this response from <a href="https://www.theroot.com/mixed-kids-are-the-cutest-isn-t-cute-1790895928">this article</a> if you want to read more.)</p>
+                </div>
         </div>
     </div>
-</div>
-</div>
 
-
-{% elif scenario.id == 3 %}
+    {% elif scenario.id == 3 %}
  
-<div class="card">
-   <div class="card-body">
-       <div class="card-title"> Suggestions</div>
-       <div class="card-text">
+    <div id='conversationStarters' class="card d-none">
+        <div class="card-body">
+            <div class="card-title">Suggestions</div>
+                <div class="card-text">
  
-           <p>Compare your response with the following:</p>
+                <p>Compare your response with the following:</p>
  
-           <p>Before you speak, take inventory of your emotions. What bodily sensations are you
-               experiencing?
-               How
-               do
-               your
-               head, stomach, and heart feel?</p>
+                <p>Before you speak, take inventory of your emotions. What bodily sensations are you experiencing?
+                   How does your head, stomach, and heart feel?</p>
  
-           <p>You might say 'I don't see it that way. I'm happy that motherhood can look different for different
-               people.' </p>
-       </div>
-   </div>
-</div>
-</div>
+                <p>You might say 'I don't see it that way. I'm happy that motherhood can look different for different
+                   people.' 
+                </p>
+                </div>
+        </div>
+    </div>
 
 {% else %}
 
 <div id="answer" class="d-none">
-    <div class='user-response'>
-    </div>
+    <div class='user-response'></div>
 
-
-
-    <div class="card m-4">
+    <div class="card m-4 hidden">
         <div class="card-body">
-            <div class="card-title"> Suggestions </div>
-            <div class="suggestions">
-                <ul>
+            <div class="card-title">Suggestions</div>
+                <div class="suggestions">
+                  <ul>
                     {% for suggestion in scenario.suggestions %}
                     <li>{{suggestion}}</li>
                     {% endfor %}
-                </ul>
-            </div>
+                  </ul>
+                </div>
         </div>
     </div>
+
     <div class="card m-4">
         <div class="card-body">
-            <div class="card-title"> Insights</div>
-            <div class="insights">
+            <div class="card-title">Insights</div>
                 <div class="insights">
                     <ul>
                         {% for insight in scenario.insights %}
@@ -153,10 +138,8 @@
                         {% endfor %}
                     </ul>
                 </div>
-            </div>
         </div>
     </div>
 </div>
-{% endif %}
 {% endif %}
 {% endblock %}
