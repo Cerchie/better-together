@@ -3,11 +3,19 @@ import os
 from flask import Flask, render_template, request, flash, redirect, session, g, jsonify
 from forms import EnterScenario
 from scenarios import scenario1, MAIN_LIST, create_scenario, get_scenarios
+import pdb
 app = Flask(__name__)
 
 # app.configs below here
 app.config['SECRET_KEY'] = 'tardigrades'
 ########
+@app.before_request
+def session_set():
+    check_session()
+
+def check_session():
+    if 'scenarios' not in session:
+        session['scenarios'] = [MAIN_LIST[0], MAIN_LIST[1], MAIN_LIST[2]]
 
 ########################################
 @app.route('/')
@@ -20,14 +28,16 @@ def landing_page():
 #Scenario pages
 @app.route('/scenario')
 def scenario_list():
-    """Shows all scenarios"""
-    scenarios = get_scenarios()
-    return render_template('scenario_list.html', scenarios = MAIN_LIST)
+    """Shows all scenarios, Uses session to store each scenario the user makes"""
+
+    list_of_scenarios = session['scenarios']
+    
+    return render_template('scenario_list.html', scenarios=list_of_scenarios)
 
 @app.route('/scenario/<int:number>')
 def scenarios(number):
     """Shows the first scenario"""
-    for item in MAIN_LIST:
+    for item in session['scenarios']:
         if item['id'] == number:
             return render_template('scenario.html', scenario=item)
 
@@ -50,7 +60,9 @@ def make_scenario():
     form = EnterScenario()
 
     if form.validate_on_submit():
-        create_scenario(form.title.data, form.description.data, form.suggestions.data, form.insights.data)
+        new_scenario = create_scenario(form.title.data, form.description.data, form.suggestions.data, form.insights.data)
+        session['scenarios'].append(new_scenario)
+        session.modified = True
         return redirect('/scenario')
     else:
         flash(f'Something went wrong!','danger')

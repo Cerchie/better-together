@@ -33,10 +33,7 @@ def create_scenario(title, desc, sugg, insights):
         "suggestions": sugg.split(','),
         "insights": insights.split(',')
     }
-
-    MAIN_LIST.append(new_scenario)
-
-    return MAIN_LIST
+    return new_scenario
 
 def get_scenarios():
     """returns scenarios"""
