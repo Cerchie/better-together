@@ -2,11 +2,19 @@
 
 {% block content %}
 <div>
+    <h1 class="m-4">View All Scenarios</h1>
     <ul>
         {% for scenario in scenarios %}
-        <li>
-            <a href="{{url_for('scenarios', number=scenario['id'])}}">{{scenario.title}}</a>
-        </li>
+        <div class="card m-3">
+            <div class="card-body">
+                <div class="card-text">
+                    <li class="ml-3">
+                        <a href="{{url_for('scenarios', number=scenario['id'])}}">{{scenario.title}}</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+
         {% endfor %}
     </ul>
 </div>
