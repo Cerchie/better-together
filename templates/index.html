@@ -13,9 +13,11 @@
 
 <body>
     <nav class="navbar navbar-light bg-info">
-        <a class="navbar-brand navlink m-1 font-weight-bold text-light" href="{{ url_for('landing_page') }}">
-            <h1>Home</h1>
-        </a>
+        <button class="btn btn-primary p-1"> <a class="navbar-brand navlink font-weight-bold text-light p-1"
+                href="{{ url_for('landing_page') }}">
+                <h3 class="p-1">Home</h3>
+            </a>
+        </button>
 
         <a class="navlink font-weight-bold m-4" href="{{ url_for('education_resources') }}">
             <h3>Resources</h3>
