@@ -9,7 +9,7 @@ scenario1 = {
 scenario2 = {
     "id": 2,
     "title": "Holiday Family Gathering",
-    "description": "You are dreading your annual family Thanksgiving dinner this year. Given the polarizing political climate, you know how difficult it will be to navugate the discussions around your uncle's strong opinions. You make it all the way to pie when it becomes difficult to not engage. Your aunt usually makes a delicious pumpkin pie, but this year has decided to try a new and different recipe as well. You decline the new pie flavor, and opt for the traditional pumpkin. Upon seeing this exchange, your uncle makes a sweeping statement that all conservatives are racists who hate progress and change. How do you respond?",
+    "description": "You are at your annual family Thanksgiving gathering. This year, you were excited to bring your significant other home to meet your family. Everyone is friendly and welcoming, and greets your significant other warmly. Your family shows a lot of interest at the dinner table, commenting frequently on your compatibility and telling stories about your childhood. While finishing dessert, your aunt comments that she thinks the combination of your complexion and your significant other's ethnicity will make beautiful mixed race babies someday should you choose to have a family. How do you respond to this?",
     "suggestions": ["Have you considered ____","I don’t see it the way you do. I see it as __________.", "Tell me more about ___", "We don't agree on ___ but we can agree on _____"],
     "insights": ["How am I processing the experience?", "What body sensations do I have?", "What is my emotional reaction?"]
 }
