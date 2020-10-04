@@ -19,19 +19,12 @@ def landing_page():
 ########################################
 #Scenario pages
 @app.route('/scenario')
-def scenarios():
+def scenario_list():
     """Shows all scenarios"""
     return render_template('scenario_list.html', scenarios = MAIN_LIST)
 
-@app.route('/scenario/1')
-def scenario_one():
-    """Shows the first scenario"""
-    scenario = scenario1
-    return render_template('scenario.html', scenario=scenario)
-
-
 @app.route('/scenario/<int:number>')
-def first_scenario(number):
+def scenarios(number):
     """Shows the first scenario"""
     for item in MAIN_LIST:
         if item['id'] == number:

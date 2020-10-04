@@ -1,22 +1,24 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<div class='row justify-content-center container-fluid shadow-lg p-4 mb-3 bg-light rounded'>
-  <div class='col-md-3 shadow p-4 mb-3 bg-white rounded'>
-    <form id='scenario-maker' class='form-group' method='POST'>
+<div class='shadow-lg p-4 mb-3 bg-light rounded col-12'>
+  <div class='container row justify-content-center card p-1 shadow p-4 mb-3 bg-white rounded col-11'>
+    <div class='col-md-12'>
+      <form class='form-group' method='POST'>
         {{form.hidden_tag() }}
-            {% for field in form 
-                if field.widget.input_type != 'hidden' %}
-            <div>
-            <h2>{{field.label}}</h2>
-            <p>{{field}}</p>
-            {% for error in field.errors %}
-                {{error}}
-            {% endfor %}
-            </div>
-            {% endfor %}
-            <button class='btn btn-md btn-success' type='submit'>Create</button>          
-    </form>
+        {% for field in form 
+            if field.widget.input_type != 'hidden' %}
+        <div>
+        <h2 class='text-dark'>{{field.label}}</h2>
+        <p>{{field}}</p>
+        {% for error in field.errors %}
+            {{error}}
+        {% endfor %}
+        </div>
+        {% endfor %}
+        <button class='btn btn-md btn-success' type='submit'>Submit Scenario</button>
+      </form>
+    </div>
   </div>
 </div>
 {% endblock %}
