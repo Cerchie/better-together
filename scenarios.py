@@ -6,6 +6,22 @@ scenario1 = {
     "insights": ["How am I processing the experience?", "What body sensations do I have?", "What is my emotional reaction?"]
 }
 
+scenario2 = {
+    "id": 2,
+    "title": "Holiday Family Gathering",
+    "description": "You are dreading your annual family Thanksgiving dinner this year. Given the polarizing political climate, you know how difficult it will be to navugate the discussions around your uncle's strong opinions. You make it all the way to pie when it becomes difficult to not engage. Your aunt usually makes a delicious pumpkin pie, but this year has decided to try a new and different recipe as well. You decline the new pie flavor, and opt for the traditional pumpkin. Upon seeing this exchange, your uncle makes a sweeping statement that all conservatives are racists who hate progress and change. How do you respond?",
+    "suggestions": ["Have you considered ____","I don’t see it the way you do. I see it as __________.", "Tell me more about ___", "We don't agree on ___ but we can agree on _____"],
+    "insights": ["How am I processing the experience?", "What body sensations do I have?", "What is my emotional reaction?"]
+}
+
+scenario2 = {
+    "id": 2,
+    "title": "Social Scenario",
+    "description": "It's been ages since you've had lunch with your friends since having your second child. You are excited to leave the baby at home with your mother so you can meet them for brunch and catch up. You arrive at the restaurant, greet each other, then place your order. One of your friends makes a face and questions your decision to order a mimosa. Aren't you nursing? Should you be drinking that? She is horrified when you discuss your excitement to return to work, and comments that since your significant other makes a large salary, it should be your job to stay home and raise your child. How do you respond?",
+    "suggestions": ["Have you considered ____","I don’t see it the way you do. I see it as __________.", "Tell me more about ___", "We don't agree on ___ but we can agree on _____"],
+    "insights": ["How am I processing the experience?", "What body sensations do I have?", "What is my emotional reaction?"]
+}
+
 MAIN_LIST = [scenario1]
 
 def create_scenario(title, desc, sugg, insights):
