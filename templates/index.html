@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css"
         integrity="sha384-8iuq0iaMHpnH2vSyvZMSIqQuUnQA7QM+f6srIdlgBrTSEyd//AWNMyEaSF2yPzNQ" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/images/favicon.ico"/>
-    <title>Responding to Comments that Perpetuate Inequality</title>
+    <link rel="icon" href="/static/images/favicon.ico" />
+    <title>Practice Responding to Biased Comments</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-info">
+        <a class="navbar-brand navlink m-1 font-weight-bold text-light" href="{{ url_for('landing_page') }}">
+            <h1>Home</h1>
+        </a>
 
-        <a class="navbar-brand mr-4" href="{{ url_for('landing_page') }}">Home</a>
-        <a class="navbar-brand mr-4" href="{{ url_for('education_resources') }}">Resources</a>
+        <a class="navlink font-weight-bold m-4" href="{{ url_for('education_resources') }}">
+            <h3>Resources</h3>
+        </a>
+
     </nav>
     {% block content %}
 
