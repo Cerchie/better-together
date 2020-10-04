@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, render_template, request, flash, redirect, session, g, jsonify
 from forms import EnterScenario
-from scenarios import scenario1, MAIN_LIST, create_scenario
+from scenarios import scenario1, MAIN_LIST, create_scenario, get_scenarios
 app = Flask(__name__)
 
 # app.configs below here
@@ -21,6 +21,7 @@ def landing_page():
 @app.route('/scenario')
 def scenario_list():
     """Shows all scenarios"""
+    scenarios = get_scenarios()
     return render_template('scenario_list.html', scenarios = MAIN_LIST)
 
 @app.route('/scenario/<int:number>')

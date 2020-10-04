@@ -37,3 +37,7 @@ def create_scenario(title, desc, sugg, insights):
     MAIN_LIST.append(new_scenario)
 
     return MAIN_LIST
+
+def get_scenarios():
+    """returns scenarios"""
+    return MAIN_LIST
