@@ -13,17 +13,51 @@
     </div>
 </div>
 <button id="response" class="btn btn-info">Submit response</button>
+<<<<<<< HEAD
 
 {% if scenario.id == 1 %}
 <div id="answer" class="d-none">
     <div class='user-response'>
     </div>
+=======
+>>>>>>> adding scen responses, editing title
 <div id="answer" class="hidden">
-    <h3>  Your Response: </h3>
+    <h3> Your Response: </h3>
     <div class="card-body">
         <div class='user-response'>
+        </div>
+
+
+<<<<<<< HEAD
+=======
+        {% if scenario.id == 1 %}
+
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"> Suggestions</div>
+                <div class="card-text">
+
+                    <p>Compare your response with the following:</p>
+
+                    <p>Before you speak, take inventory of your emotions. What bodily sensations are you
+                        experiencing?
+                        How
+                        do
+                        your
+                        head, stomach, and heart feel?</p>
+
+                    <p>You might say 'I don't see it that way. I know the job market is tough right now, but have
+                        you
+                        considered
+                        that it might be an effect of the pandemic?'</p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    {% elif scenario.id == 2 %}
+
+>>>>>>> adding scen responses, editing title
     <div class="card">
         <div class="card-body">
             <div class="card-title"> Suggestions</div>
@@ -38,20 +72,48 @@
                     your
                     head, stomach, and heart feel?</p>
 
-                <p>You might say 'I don't see it that way. I know the job market is tough right now, but have
-                    you
-                    considered
-                    that it might be an effect of the pandemic?'</p>
+                <p>You might say 'Tell me more about why you think that.' Wait for him to finish his response to your
+                    question.
+                    You might respond 'Thanks for explaining. I don't see it the way you do.' If you feel upset, you can
+                    say 'I'd love to
+                    talk about this another time, but can we table the discussion until after the holidays?' </p>
             </div>
         </div>
     </div>
 </div>
+{% elif scenario.id == 3 %}
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title"> Suggestions</div>
+        <div class="card-text">
+
+            <p>Compare your response with the following:</p>
+
+            <p>Before you speak, take inventory of your emotions. What bodily sensations are you
+                experiencing?
+                How
+                do
+                your
+                head, stomach, and heart feel?</p>
+
+            <p>You might say 'I don't see it that way. I'm happy that motherhood can look different for different
+                people.' </p>
+        </div>
+    </div>
+</div>
+</div>
+
 {% else %}
 
 <div id="answer" class="d-none">
     <div class='user-response'>
     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> adding scen responses, editing title
     <div class="card m-4">
         <div class="card-body">
             <div class="card-title"> Suggestions </div>
