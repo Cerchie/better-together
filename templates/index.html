@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css"
         integrity="sha384-8iuq0iaMHpnH2vSyvZMSIqQuUnQA7QM+f6srIdlgBrTSEyd//AWNMyEaSF2yPzNQ" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
-    <title>Uncover Biases</title>
+    <title>Responding to Comments that Perpetuate Inequality</title>
 </head>
 
 <body>
     <nav class="navbar navbar-light bg-light">
-        <h3 class="navbar-brand">Welcome</h3>
+
         <a class="navbar-brand mr-4" href="{{ url_for('landing_page') }}">Home</a>
+        <a class="navbar-brand mr-4" href="{{ url_for('education_resources') }}">Resources</a>
     </nav>
     {% block content %}
 
