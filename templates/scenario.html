@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 
 {% block content %}
+
 <div class="card">
     <div class="card-body">
         <div class="card-title">{{scenario.title}}</div>
@@ -13,14 +14,8 @@
     </div>
 </div>
 <button id="response" class="btn btn-info">Submit response</button>
-<<<<<<< HEAD
 
 {% if scenario.id == 1 %}
-<div id="answer" class="d-none">
-    <div class='user-response'>
-    </div>
-=======
->>>>>>> adding scen responses, editing title
 <div id="answer" class="hidden">
     <h3> Your Response: </h3>
     <div class="card-body">
@@ -28,8 +23,6 @@
         </div>
 
 
-<<<<<<< HEAD
-=======
         {% if scenario.id == 1 %}
 
         <div class="card">
@@ -54,6 +47,7 @@
             </div>
         </div>
     </div>
+
 
     {% elif scenario.id == 2 %}
 
@@ -81,8 +75,8 @@
         </div>
     </div>
 </div>
-{% elif scenario.id == 3 %}
 
+{% elif scenario.id == 2 %}
 <div class="card">
     <div class="card-body">
         <div class="card-title"> Suggestions</div>
@@ -96,11 +90,35 @@
                 do
                 your
                 head, stomach, and heart feel?</p>
-
-            <p>You might say 'I don't see it that way. I'm happy that motherhood can look different for different
-                people.' </p>
+            <p>You might say, “I see that your intention was positive, but that comment makes me feel upset. 
+                Our babies will be cute, but I don’t like the implication that it’s because of their ethnic makeup.” 
+                (We got this response from <a href="https://www.theroot.com/mixed-kids-are-the-cutest-isn-t-cute-1790895928">this article</a> if you want to read more.)</p>
         </div>
     </div>
+</div>
+</div>
+
+
+{% elif scenario.id == 3 %}
+ 
+<div class="card">
+   <div class="card-body">
+       <div class="card-title"> Suggestions</div>
+       <div class="card-text">
+ 
+           <p>Compare your response with the following:</p>
+ 
+           <p>Before you speak, take inventory of your emotions. What bodily sensations are you
+               experiencing?
+               How
+               do
+               your
+               head, stomach, and heart feel?</p>
+ 
+           <p>You might say 'I don't see it that way. I'm happy that motherhood can look different for different
+               people.' </p>
+       </div>
+   </div>
 </div>
 </div>
 
@@ -110,10 +128,8 @@
     <div class='user-response'>
     </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> adding scen responses, editing title
+
     <div class="card m-4">
         <div class="card-body">
             <div class="card-title"> Suggestions </div>
@@ -141,5 +157,6 @@
         </div>
     </div>
 </div>
+{% endif %}
 {% endif %}
 {% endblock %}
