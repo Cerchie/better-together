@@ -44,7 +44,7 @@ def resources_scenario_one(id):
     
 
 @app.route('/scenario_maker', methods=['GET','POST'])
-def testing():
+def make_scenario():
     """Let user create their own scenarios"""
     form = EnterScenario()
 

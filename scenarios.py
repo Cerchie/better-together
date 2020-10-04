@@ -22,7 +22,7 @@ scenario3 = {
     "insights": ["How am I processing the experience?", "What body sensations do I have?", "What is my emotional reaction?"]
 }
 
-MAIN_LIST = [scenario1]
+MAIN_LIST = [scenario1, scenario2, scenario3]
 
 def create_scenario(title, desc, sugg, insights):
     """Creates a new scenario object and adds it to master List"""
