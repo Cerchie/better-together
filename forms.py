@@ -8,5 +8,5 @@ class EnterScenario(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     description = StringField('Description', validators=[DataRequired()])
     suggestions = StringField('Suggestions(Separate by comma)', validators=[DataRequired()])
-    insights = StringField('Insights(Separate by comma', validators=[DataRequired()])
+    insights = StringField('Insights(Separate by comma)', validators=[DataRequired()])
 
