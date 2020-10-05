@@ -1,4 +1,4 @@
-# better_together_tardigrades
+# better_together
 
 Hi! We created this tool in response the NASA 2020 SpaceApps Challenge 'Better Together.' :rocket:
 
@@ -10,4 +10,4 @@ We deployed our website on Heroku. We encountered some hiccups when we ran into 
 
 In the future, we'd like to add user capability to the website so users can edit and delete their scenarios.
 
-|Lucia, Jake, Amanda, Luis
+|[Lucia](https://github.com/Cerchie), [Jake](https://github.com/jakejg), [Amanda](https://github.com/mandathompson), [Luis](https://github.com/LSanchez17)
